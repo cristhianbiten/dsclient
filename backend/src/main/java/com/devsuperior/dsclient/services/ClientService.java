@@ -24,4 +24,12 @@ public class ClientService {
 		return page.map(x -> new ClientDTO(x));
 	}
 
+	@Transactional(readOnly = true)
+	public ClientDTO findById(Long id) {
+
+		Client entity = repository.getReferenceById(id);
+
+		return new ClientDTO(entity);
+	}
+
 }
