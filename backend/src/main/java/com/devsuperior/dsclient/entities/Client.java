@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
+import com.devsuperior.dsclient.dto.ClientDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -40,6 +42,7 @@ public class Client implements Serializable {
 		this.birthDate = birthDate;
 		this.children = children;
 	}
+	
 
 	public Long getId() {
 		return id;
